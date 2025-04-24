@@ -13,5 +13,37 @@ namespace couplebox3._0
         {
 
         }
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            //declare a sqlconnection
+
+            SqlConnection RegCon = new SqlConnection(SqlDataSource1.ConnectionString);
+
+            //declare a command
+            SqlCommand RegCommand = new SqlCommand(SqlDataSource1.InsertCommand);
+            RegCommand.Connection = RegCon;
+
+
+            RegCommand.Parameters.AddWithValue("@Email", txtEmail.Text);
+            RegCommand.Parameters.AddWithValue("@Password", txtPassword.Text);
+
+            //code the rest of the columns in the database
+            RegCommand.Parameters.AddWithValue("@FName", txtFName.Text);
+            RegCommand.Parameters.AddWithValue("@LName", txtLName.Text);
+           
+
+            //open the connection
+            RegCon.Open();
+
+            //execute the Insert command
+            RegCommand.ExecuteNonQuery();
+
+            //close the connection
+            RegCon.Close();
+
+            //send to a page
+            Response.Redirect("Success.aspx");
+
+        }
     }
 }
