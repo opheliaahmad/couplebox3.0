@@ -5,13 +5,32 @@
 <html>
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="<%: ResolveUrl("~/Styles/StyleSheet1.css") %>" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <style type="text/css">
+        .auto-style1 {
+            color: #FF3399;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="hldefault0" runat="server" NavigateUrl="~/default.aspx" CssClass="auto-style1">Home</asp:HyperLink>
+            </strong><span class="auto-style1"><strong>&nbsp;|
+            </strong></span><strong>
+            <asp:HyperLink ID="hlregister0" runat="server" NavigateUrl="~/registration.aspx" CssClass="auto-style1">Register</asp:HyperLink>
+            </strong><span class="auto-style1"><strong>&nbsp;|
+            </strong></span><strong>
+            <asp:HyperLink ID="hllogin0" runat="server" NavigateUrl="~/login.aspx" CssClass="auto-style1">Login</asp:HyperLink>
+            <br class="auto-style1" />
+            </strong>&nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <br />
             </asp:ContentPlaceHolder>
         </div>
     </form>
