@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include="accountmanager.aspx" />
     <Content Include="default.aspx" />
-    <Content Include="forgotpassword.aspx" />
     <Content Include="login.aspx" />
     <Content Include="paymentform.aspx" />
     <Content Include="quiz.aspx" />
@@ -93,13 +92,6 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="forgotpassword.aspx.cs">
-      <DependentUpon>forgotpassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="forgotpassword.aspx.designer.cs">
-      <DependentUpon>forgotpassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
