@@ -76,7 +76,6 @@
     <Content Include="StyleSheet1.css" />
     <Content Include="subscription.aspx" />
     <Content Include="success.aspx" />
-    <Content Include="TEST.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -143,13 +142,6 @@
     </Compile>
     <Compile Include="success.aspx.designer.cs">
       <DependentUpon>success.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="TEST.aspx.cs">
-      <DependentUpon>TEST.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TEST.aspx.designer.cs">
-      <DependentUpon>TEST.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
