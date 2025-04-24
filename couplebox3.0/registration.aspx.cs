@@ -42,7 +42,7 @@ namespace couplebox3._0
             RegCon.Close();
 
             //send to a page
-            Response.Redirect("Success.aspx");
+            Response.Redirect("Quiz.aspx");
 
         }
     }
