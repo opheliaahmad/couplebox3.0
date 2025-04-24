@@ -4,48 +4,44 @@
         .auto-style2 {
             width: 80%;
         }
+        .auto-style3 {
+            text-align: right;
+        }
         .auto-style4 {
             margin-left: 320px;
-            text-align: center;
-        }
-        .auto-style5 {
-            text-align: center;
-        }
-        .auto-style6 {
-            text-align: left;
-        }
-        .auto-style7 {
-            text-align: right;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p class="auto-style4">
-        &nbsp;</p>
-    <h3 class="auto-style5">
-        <span class="auto-style1"><strong>Log in to begin your next chapter, together!</strong></span><br />
-    </h3>
+&nbsp;&nbsp;&nbsp; Log in to begin your next chapter, together!<br />
+    </p>
     <table align="center" class="auto-style2">
         <tr>
-            <td class="auto-style7">Email Address:</td>
-            <td class="auto-style6">
+            <td class="auto-style3">Email Address:</td>
+            <td>
                 <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style7">Password:</td>
-            <td class="auto-style6">
+            <td class="auto-style3">Password:</td>
+            <td>
                 <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style5" colspan="2">
+            <td class="auto-style3">
                 <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
+            </td>
+            <td>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="subscription.aspx" Text="Forgot Password?" />
             </td>
         </tr>
         <tr>
-            <td class="auto-style5" colspan="2">
+            <td class="auto-style3">
                 <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember Me" />
+            </td>
+            <td>
                 <asp:Label ID="lblMsg" runat="server"></asp:Label>
             </td>
         </tr>

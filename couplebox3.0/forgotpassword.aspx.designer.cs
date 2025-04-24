@@ -11,7 +11,7 @@ namespace couplebox3._0
 {
 
 
-    public partial class login
+    public partial class forgotpassword
     {
     }
 }
