@@ -70,7 +70,6 @@
     <Content Include="accountmanager.aspx" />
     <Content Include="default.aspx" />
     <Content Include="forgotpassword.aspx" />
-    <Content Include="login.aspx" />
     <Content Include="paymentform.aspx" />
     <Content Include="quiz.aspx" />
     <Content Include="registration.aspx" />
@@ -100,13 +99,6 @@
     </Compile>
     <Compile Include="forgotpassword.aspx.designer.cs">
       <DependentUpon>forgotpassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="paymentform.aspx.cs">
       <DependentUpon>paymentform.aspx</DependentUpon>
