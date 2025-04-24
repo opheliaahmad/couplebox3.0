@@ -4,18 +4,18 @@
     .auto-style2 {
         width: 80%;
     }
-    .auto-style3 {
-        margin-left: 320px;
-    }
     .auto-style4 {
         text-align: right;
     }
-</style>
+        .auto-style5 {
+            text-align: center;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p class="auto-style3">
+    <h3 class="auto-style5">
     Lets get started to deepen your connection! If you dont have an account register below.<br />
-</p>
+</h3>
 <table align="center" class="auto-style2">
     <tr>
         <td class="auto-style4">First Name:</td>
