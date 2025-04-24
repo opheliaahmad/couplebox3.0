@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace couplebox3._0
 {
@@ -13,10 +16,13 @@ namespace couplebox3._0
         {
 
         }
-        protected void Login_Click(object sender, EventArgs e)
+
+
+
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
             //declare variables for credentials
-
+            String sUID = "";
             string sUser = "";
             string sPass = "";
 
@@ -47,20 +53,38 @@ namespace couplebox3._0
             //Populate the reader, assign the values to the variables, then compare the values pulled from the databse to what's in the textbox
             while (myReader.Read())
             {
-
+                sUID = myReader.GetString(0);
                 sPass = myReader.GetString(1);
                 sUser = myReader.GetString(2) + " " + myReader.GetString(3);
             }
+         
             if (txtEmail.Text == sUID && txtPassword.Text == sPass)
             {
                 //if the credentials match
                 Session["user"] = sUser;
-                Response.Redirect("subscription.aspx");
+                Session["email"] = sUID;
+                Response.Redirect("success.aspx");
             }
             else
             {
                 //display an error
-                lblMessage.Text = "Invalid username or password";
+                lblMsg.Text = "Invalid username or password";
             }
         }
+
+        protected void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
+}

@@ -62,10 +62,7 @@
     </tr>
     <tr>
         <td>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:S25Team2ConnectionString %>" ProviderName="<%$ ConnectionStrings:S25Team2ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [User] WHERE ([Email] = @Email)">
-                <SelectParameters>
-                    <asp:Parameter Name="Email" Type="String" />
-                </SelectParameters>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:S25Team2ConnectionString %>" SelectCommand="SELECT [Email] FROM [Users]">
             </asp:SqlDataSource>
         </td>
         <td>&nbsp;</td>

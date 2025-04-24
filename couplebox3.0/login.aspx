@@ -20,37 +20,32 @@
         <tr>
             <td class="auto-style3">Email Address:</td>
             <td>
-                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style3">Password:</td>
             <td>
-                <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style3">
-                <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
+                <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
             </td>
             <td>
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="subscription.aspx" Text="Forgot Password?" />
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style3">
-                <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember Me" />
-            </td>
+                &nbsp;</td>
             <td>
                 <asp:Label ID="lblMsg" runat="server"></asp:Label>
             </td>
         </tr>
     </table>
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:S25Team2ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:S25Team2ConnectionString2.ProviderName %>" SelectCommand="SELECT * FROM [User] WHERE ([Email] = @Email)">
-        <SelectParameters>
-            <asp:Parameter Name="Email" Type="String" />
-        </SelectParameters>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:S25Team2ConnectionString %>" SelectCommand="SELECT [Email] FROM [Users]" OnSelecting="SqlDataSource1_Selecting">
     </asp:SqlDataSource>
     <br />
 </asp:Content>

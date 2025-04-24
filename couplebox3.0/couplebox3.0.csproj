@@ -76,8 +76,8 @@
     <Content Include="registration.aspx" />
     <Content Include="StyleSheet1.css" />
     <Content Include="subscription.aspx" />
-    <Content Include="success.aspx" />
     <Content Include="Web.config" />
+    <Content Include="success.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="accountmanager.aspx.cs">

@@ -11,7 +11,7 @@ namespace couplebox3._0
 {
 
 
-    public partial class success
+    public partial class WebForm1
     {
     }
 }

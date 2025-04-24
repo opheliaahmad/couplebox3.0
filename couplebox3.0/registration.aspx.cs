@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace couplebox3._0
 {
@@ -45,5 +48,7 @@ namespace couplebox3._0
             Response.Redirect("Quiz.aspx");
 
         }
+
+    
     }
 }
