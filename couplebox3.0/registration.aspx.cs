@@ -23,7 +23,7 @@ namespace couplebox3._0
             SqlConnection RegCon = new SqlConnection(SqlDataSource1.ConnectionString);
 
             //declare a command
-            SqlCommand RegCommand = new SqlCommand(SqlDataSource1.InsertCommand);
+            SqlCommand RegCommand = new SqlCommand("INSERT INTO Users (Email, Password, FName, LName, Address, CardNumber) VALUES (@Email, @Password, @FName, @LName, @Address, @CardNumber)", RegCon);
             RegCommand.Connection = RegCon;
 
 
@@ -33,7 +33,9 @@ namespace couplebox3._0
             //code the rest of the columns in the database
             RegCommand.Parameters.AddWithValue("@FName", txtFName.Text);
             RegCommand.Parameters.AddWithValue("@LName", txtLName.Text);
-           
+            RegCommand.Parameters.AddWithValue("@CardNumber", txtCardNumber.Text);
+            RegCommand.Parameters.AddWithValue("@Address", txtAddress.Text);
+
 
             //open the connection
             RegCon.Open();
@@ -49,6 +51,9 @@ namespace couplebox3._0
 
         }
 
-    
+        protected void txtPasswordC0_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

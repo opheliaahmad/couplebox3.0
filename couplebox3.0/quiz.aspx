@@ -51,12 +51,16 @@
             width: 222px;
             background-color: #FFFFFF;
         }
+        .auto-style33 {
+            width: 449px;
+            height: 79px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2 class="auto-style1">
     <strong>Personalization Quiz</strong></h2>
-<table align="center" class="auto-style14">
+<table align="center" class="auto-style33">
     <tr>
         <td class="auto-style21" colspan="2"><strong>Q1: What are your shared interests?</strong></td>
     </tr>

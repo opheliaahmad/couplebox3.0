@@ -34,7 +34,8 @@ namespace couplebox3._0
             SqlConnection myConnection = new SqlConnection(SqlDataSource1.ConnectionString);
 
             //declare a sqlcommand
-            SqlCommand myCommand = new SqlCommand(SqlDataSource1.SelectCommand);
+            SqlCommand myCommand = new SqlCommand(
+    "SELECT Email, Password, FName, LName FROM Users WHERE Email = @Email AND Password = @Password", myConnection);
 
             //Set the connection
             myCommand.Connection = myConnection;

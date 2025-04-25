@@ -21,14 +21,14 @@
         <td class="auto-style4">First Name:</td>
         <td>
             <asp:TextBox ID="txtFName" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvFName" runat="server" ErrorMessage="First Name is required"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvFName" runat="server" ErrorMessage="First Name is required" ControlToValidate="txtFName"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
         <td class="auto-style4">Last Name:</td>
         <td>
             <asp:TextBox ID="txtLName" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvLName" runat="server" ErrorMessage="Last Name is required"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvLName" runat="server" ErrorMessage="Last Name is required" ControlToValidate="txtLName"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -54,7 +54,21 @@
     </tr>
     <tr>
         <td class="auto-style4">
-            <asp:Button ID="btnRegister" runat="server" OnClick="Button1_Click" Text="Register" />
+            Card Number:</td>
+        <td>
+            <asp:TextBox ID="txtCardNumber" runat="server" OnTextChanged="txtPasswordC0_TextChanged"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style4">
+            Address:</td>
+        <td>
+            <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style4">
+            <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" />
         </td>
         <td>
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="login.aspx" Text="Login" />
