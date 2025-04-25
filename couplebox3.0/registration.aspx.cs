@@ -47,7 +47,7 @@ namespace couplebox3._0
             RegCon.Close();
 
             //send to a page
-            Response.Redirect("Quiz.aspx");
+            Response.Redirect("login.aspx");
 
         }
 

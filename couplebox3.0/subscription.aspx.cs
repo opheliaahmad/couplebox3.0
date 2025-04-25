@@ -12,6 +12,10 @@ namespace couplebox3._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["user"] == null)
+            {
+                Response.Redirect("login.aspx");
+            }
         }
 
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)

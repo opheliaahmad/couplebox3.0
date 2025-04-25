@@ -25,10 +25,33 @@
     <p class="auto-style5">
         A personalized monthly experience designed to deepen your connection. Whether you’re newlyweds, long-time partners, or somewhere in between, we deliver unique moments to your doorstep so that you can bond, grow, and make lasting memories together.</p>
 <p class="auto-style5">
-    <br />
-        Get started with
+    <table align="center" class="auto-style2">
+        <tr>
+            <td colspan="2">Get started with
         <asp:HyperLink ID="hlregister2" runat="server" NavigateUrl="~/registration.aspx" CssClass="auto-style4">Register</asp:HyperLink>
 &nbsp;or
         <asp:HyperLink ID="hllogin2" runat="server" NavigateUrl="~/login.aspx" CssClass="auto-style4">Login</asp:HyperLink>
-        !</p>
+        !</td>
+        </tr>
+        <tr>
+            <td class="auto-style4">Description:</td>
+            <td class="auto-style3" rowspan="4">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/heart.png" />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style5">Click the button bellow to take a quick quiz to discover which one of our boxes with be the perfect fit to spice things up between you and your partner!<br />
+                <br />
+                <asp:Button ID="btnQuiz" runat="server" OnClick="btnQuiz_Click" Text="Quiz!" />
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style4">&nbsp;</td>
+        </tr>
+    </table>
+    <br />
+        </p>
 </asp:Content>

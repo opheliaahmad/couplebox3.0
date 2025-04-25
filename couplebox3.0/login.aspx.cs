@@ -35,7 +35,9 @@ namespace couplebox3._0
 
             //declare a sqlcommand
             SqlCommand myCommand = new SqlCommand(
-    "SELECT Email, Password, FName, LName FROM Users WHERE Email = @Email AND Password = @Password", myConnection);
+       "SELECT Email, Password, FName, LName FROM Users WHERE Email = @Email AND Password = @Password",
+       myConnection);
+
 
             //Set the connection
             myCommand.Connection = myConnection;
@@ -62,9 +64,10 @@ namespace couplebox3._0
             if (txtEmail.Text == sUID && txtPassword.Text == sPass)
             {
                 //if the credentials match
+               
                 Session["user"] = sUser;
                 Session["email"] = sUID;
-                Response.Redirect("success.aspx");
+                Response.Redirect("default.aspx");
             }
             else
             {

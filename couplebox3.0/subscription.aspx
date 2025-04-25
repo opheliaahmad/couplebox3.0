@@ -32,14 +32,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table align="center" class="auto-style2">
         <tr>
-            <td class="auto-style4" colspan="2">
+            <td class="auto-style4" colspan="2" style="text-align: center">
                 Chose which subscription type you would like! Based on your quiz we recommend choosing the
                 <asp:Label ID="lblQuiz" runat="server"></asp:Label>
                 &nbsp;box! &lt;3
             </td>
         </tr>
         <tr>
-            <td class="auto-style6">
+            <td class="auto-style6" style="text-align: center">
                 <asp:CheckBox ID="CheckBox1" runat="server" Text="Love Birds" CssClass="exclusive-checkbox" />
                 ..............................($31.99/mo)<br />
                 <asp:CheckBox ID="cb2" runat="server" Text="High Class Romance" CssClass="exclusive-checkbox" />
