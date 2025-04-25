@@ -7,7 +7,7 @@
             top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
-            border: 2px solid hotpink;
+             border: 2px solid #cc0033;
             padding: 20px;
             background-color: lightpink;
             text-align: center;

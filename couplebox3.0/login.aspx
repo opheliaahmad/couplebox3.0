@@ -6,7 +6,7 @@
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid hotpink;
+    border: 2px solid #cc0033;
     padding: 20px;
     background-color: lightpink;
     text-align: center;
@@ -20,10 +20,20 @@
             text-align: center;
             font-size: 18px;
             margin-bottom: 20px;
+
         }
         .auto-style5 {
             width: 677px;
         }
+           table.auto-style3 {
+        border-collapse: collapse;
+        border: 2px solid #cc0033; /* romantic red border for the whole table */
+    }
+
+    .auto-style3 td {
+        border: 1px solid #cc0033; /* romantic red for each cell */
+        padding: 10px;
+    }
     </style>
 </asp:Content>
 

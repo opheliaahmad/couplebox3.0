@@ -6,7 +6,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            border: 2px solid hotpink;
+            border: 2px solid #cc0033;
             padding: 20px;
             background-color: lightpink;
             text-align: center;
@@ -20,21 +20,26 @@
             text-align: center;
             font-size: 18px;
             margin-bottom: 20px;
+             
         }
 
         .auto-style5 {
             width: 677px;
+             border: 2px solid #cc0033;
         }
 
         .auto-style6 {
             width: 709px;
+             border: 2px solid #cc0033;
         }
         .auto-style7 {
             width: 709px;
             text-align: justify;
+             border: 2px solid #cc0033;
         }
         .auto-style8 {
             margin-left: 0px;
+             
         }
     </style>
 </asp:Content>
