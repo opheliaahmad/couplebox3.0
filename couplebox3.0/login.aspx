@@ -29,7 +29,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p class="auto-style4">
-        ❤️ Log in to begin your next chapter, together!
+        ❤️ Log in or navigate to the register page to begin your next chapter, together!
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server"
                     ConnectionString="<%$ ConnectionStrings:S25Team2ConnectionString %>"
                     SelectCommand="SELECT [Email] FROM [Users]" 

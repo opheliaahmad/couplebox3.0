@@ -76,7 +76,7 @@
         <tr>
             <td class="auto-style7">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="auto-style8" />
+                <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="auto-style8" OnClick="Button1_Click" />
                 &nbsp;</td>
             <td class="auto-style5"></td>
         </tr>

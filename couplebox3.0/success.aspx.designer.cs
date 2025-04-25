@@ -15,6 +15,15 @@ namespace couplebox3._0
     {
 
         /// <summary>
+        /// lblSubtype control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSubtype;
+
+        /// <summary>
         /// Image1 control.
         /// </summary>
         /// <remarks>
@@ -24,12 +33,12 @@ namespace couplebox3._0
         protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// btnQuiz control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnQuiz;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

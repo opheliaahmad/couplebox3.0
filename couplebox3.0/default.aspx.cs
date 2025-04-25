@@ -11,10 +11,7 @@ namespace couplebox3._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["user"] == null)
-            {
-                Response.Redirect("login.aspx");
-            }
+            
         }
 
         protected void btnQuiz_Click(object sender, EventArgs e)
@@ -22,6 +19,10 @@ namespace couplebox3._0
             if (Session["user"] != null)
             {
                 Response.Redirect("quiz.aspx");
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
             }
 
         }

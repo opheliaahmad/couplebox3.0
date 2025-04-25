@@ -46,6 +46,18 @@ namespace couplebox3._0
             //close the connection
             RegCon.Close();
 
+            SqlConnection RegCon1 = new SqlConnection(SqlDataSource1.ConnectionString);
+
+            //declare a command
+            SqlCommand RegCommand1 = new SqlCommand("INSERT INTO Subscriptions (Email) VALUES (@Email)", RegCon1);
+            RegCommand1.Connection = RegCon1;
+            RegCommand1.Parameters.AddWithValue("@Email", txtEmail.Text);
+            RegCon1.Open();
+            RegCommand1.ExecuteNonQuery();
+            RegCon1.Close();
+
+            RegCommand1.Parameters.AddWithValue("@Email", txtEmail.Text);
+
             //send to a page
             Response.Redirect("login.aspx");
 
