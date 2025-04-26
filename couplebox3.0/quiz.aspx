@@ -1,135 +1,114 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="quiz.aspx.cs" Inherits="couplebox3._0.quiz" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-    .auto-style1 {
-        text-align: center;
-    }
-    .auto-style14 {
-        width: 443px;
-        height: 120px;
-    }
-    .auto-style21 {
-        text-align: left;
-        height: 38px;
-        background-color: #FFFFFF;
-    }
-        .auto-style25 {
-            height: 11px;
-            width: 221px;
-            background-color: #FFFFFF;
-        }
-        .auto-style26 {
-            height: 11px;
-            width: 222px;
-            background-color: #FFFFFF;
-        }
-        .auto-style27 {
-            height: 14px;
-            width: 221px;
-            background-color: #FFFFFF;
-        }
-        .auto-style28 {
-            height: 14px;
-            width: 222px;
-            background-color: #FFFFFF;
-        }
-        .auto-style29 {
-            height: 7px;
-            width: 221px;
-            background-color: #FFFFFF;
-        }
-        .auto-style30 {
-            height: 7px;
-            width: 222px;
-            background-color: #FFFFFF;
-        }
-        .auto-style31 {
-            width: 221px;
-            background-color: #FFFFFF;
-        }
-        .auto-style32 {
-            width: 222px;
-            background-color: #FFFFFF;
-        }
-        .auto-style33 {
-            width: 449px;
-            height: 79px;
-        }
+     :root {
+    --romantic-red: #cc0033;
+}
+
+body {
+    background-color: #ffe6f0;
+    color: #000;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='%23ffb6c1' fill-opacity='0.4'%3E%3Cpath d='M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0z'/%3E%3Cpath d='M10 18c-4.418 0-8-3.582-8-8 0-1.432.363-2.791 1.004-4L10 14.915 16.996 6c.641 1.209 1.004 2.568 1.004 4 0 4.418-3.582 8-8 8z'/%3E%3C/g%3E%3C/svg%3E");
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.quiz-container {
+    background-color: lightpink;
+    border: 2px solid var(--romantic-red) !important;
+    border-radius: 12px;
+    padding: 20px;
+    width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    color: var(--romantic-red) !important;
+    font-family: "Times New Roman", serif;
+}
+
+.quiz-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.quiz-table td {
+    border: 2px solid var(--romantic-red) !important;
+    background-color: lightpink;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #990026;
+    background-color: #ffe6eb;
+    padding: 10px;
+    border: 2px solid var(--romantic-red) !important;
+    border-radius: 10px;
+}
+
+.submit-row {
+    padding-top: 20px;
+    border: 2px solid var(--romantic-red) !important;
+    border-radius: 10px;
+}
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 class="auto-style1">
-    <strong>Personalization Quiz</strong></h2>
-<table align="center" class="auto-style33">
-    <tr>
-        <td class="auto-style21" colspan="2"><strong>Q1: What are your shared interests?</strong></td>
-    </tr>
-    <tr>
-        <td class="auto-style31">
-            <asp:CheckBox ID="cbboardgames" runat="server" OnCheckedChanged="cbboardgames_CheckedChanged" Text="Board Games" />
-        </td>
-        <td class="auto-style32">
-            <asp:CheckBox ID="cboutdoors" runat="server" OnCheckedChanged="cboutdoors_CheckedChanged" Text="Outdoor Adventures" />
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style31">
-            <asp:CheckBox ID="cbcooking" runat="server" OnCheckedChanged="cbcooking_CheckedChanged" Text="Cooking" />
-        </td>
-        <td class="auto-style32">
-            <asp:CheckBox ID="cbmovies" runat="server" OnCheckedChanged="cbmovies_CheckedChanged" Text="Movie Nights" />
-        </td>
-    </tr>
-</table>
-<br />
-<br />
-<br />
-<table align="center" class="auto-style14">
-    <tr>
-        <td class="auto-style21" colspan="2"><strong>Q2: Preferred date style?</strong></td>
-    </tr>
-    <tr>
-        <td class="auto-style27">
-            <asp:CheckBox ID="cbnightin" runat="server" OnCheckedChanged="cbnightin_CheckedChanged" Text="Night In" />
-        </td>
-        <td class="auto-style28">
-            <asp:CheckBox ID="cbrestaurant" runat="server" OnCheckedChanged="cbrestraunt_CheckedChanged" Text="Restaurant Experience" />
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style25">
-            <asp:CheckBox ID="cbnightout" runat="server" OnCheckedChanged="cbnightout_CheckedChanged" Text="Night Out" />
-        </td>
-        <td class="auto-style26">
-            <asp:CheckBox ID="cbsurpriseme" runat="server" OnCheckedChanged="cbsurpriseme_CheckedChanged" Text="Surprise Me" />
-        </td>
-    </tr>
-</table>
-<br />
-<br />
-<br />
-<table align="center" class="auto-style14">
-    <tr>
-        <td class="auto-style21" colspan="2"><strong>Q3: Primary love language?</strong></td>
-    </tr>
-    <tr>
-        <td class="auto-style29">
-            <asp:CheckBox ID="cbgiftgiving" runat="server" OnCheckedChanged="cbgiftgiving_CheckedChanged" Text="Gift Giving" />
-        </td>
-        <td class="auto-style30">
-            <asp:CheckBox ID="cbwords" runat="server" OnCheckedChanged="cbwords_CheckedChanged" Text="Words Of Affirmation" />
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style31">
-            <asp:CheckBox ID="cbqualitytime" runat="server" OnCheckedChanged="cbqualitytime_CheckedChanged" Text="Quality Time" />
-        </td>
-        <td class="auto-style32">
-            <asp:CheckBox ID="cbphysicaltouch" runat="server" OnCheckedChanged="cbphysicaltouch_CheckedChanged" Text="Physical Touch" />
-        </td>
-    </tr>
-</table>
-<p class="auto-style1">
-    <asp:Button ID="btnsubmit" runat="server" OnClick="btnsubmit_Click" Text="Submit" />
-</p>
+    <div class="quiz-container">
+        <h2>Personalization Quiz</h2>
+
+        <table class="quiz-table">
+            <!-- Q1 -->
+            <tr>
+                <td colspan="4" class="section-title">Q1: What are your shared interests?</td>
+            </tr>
+            <tr>
+                <td><asp:CheckBox ID="cbboardgames" runat="server" AutoPostBack="True" OnCheckedChanged="cbboardgames_CheckedChanged" Text="Board Games" /></td>
+                <td><asp:CheckBox ID="cboutdoors" runat="server" AutoPostBack="True" OnCheckedChanged="cboutdoors_CheckedChanged" Text="Outdoor Adventures" /></td>
+                <td><asp:CheckBox ID="cbcooking" runat="server" AutoPostBack="True" OnCheckedChanged="cbcooking_CheckedChanged" Text="Cooking" /></td>
+                <td><asp:CheckBox ID="cbmovies" runat="server" AutoPostBack="True" OnCheckedChanged="cbmovies_CheckedChanged" Text="Movie Nights" /></td>
+            </tr>
+
+            <!-- Q2 -->
+            <tr>
+                <td colspan="4" class="section-title">Q2: Preferred date style?</td>
+            </tr>
+            <tr>
+                <td><asp:CheckBox ID="cbnightin" runat="server" AutoPostBack="True" OnCheckedChanged="cbnightin_CheckedChanged" Text="Night In" /></td>
+                <td><asp:CheckBox ID="cbrestraunt" runat="server" AutoPostBack="True" OnCheckedChanged="cbrestraunt_CheckedChanged" Text="Restaurant Experience" /></td>
+                <td><asp:CheckBox ID="cbnightout" runat="server" AutoPostBack="True" OnCheckedChanged="cbnightout_CheckedChanged" Text="Night Out" /></td>
+                <td><asp:CheckBox ID="cbsurpriseme" runat="server" AutoPostBack="True" OnCheckedChanged="cbsurpriseme_CheckedChanged" Text="Surprise Me" /></td>
+            </tr>
+
+            <!-- Q3 -->
+            <tr>
+                <td colspan="4" class="section-title">Q3: Primary love language?</td>
+            </tr>
+            <tr>
+                <td><asp:CheckBox ID="cbgiftgiving" runat="server" AutoPostBack="True" OnCheckedChanged="cbgiftgiving_CheckedChanged" Text="Gift Giving" /></td>
+                <td><asp:CheckBox ID="cbwords" runat="server" AutoPostBack="True" OnCheckedChanged="cbwords_CheckedChanged" Text="Words Of Affirmation" /></td>
+                <td><asp:CheckBox ID="cbqualitytime" runat="server" AutoPostBack="True" OnCheckedChanged="cbqualitytime_CheckedChanged" Text="Quality Time" /></td>
+                <td><asp:CheckBox ID="cbphysicaltouch" runat="server" AutoPostBack="True" OnCheckedChanged="cbphysicaltouch_CheckedChanged" Text="Physical Touch" /></td>
+            </tr>
+
+            <!-- Submit -->
+            <tr>
+                <td colspan="4" class="submit-row">
+                    <asp:Button ID="btnsubmit" runat="server" OnClick="btnsubmit_Click" Text="Submit" />
+                </td>
+            </tr>
+        </table>
+    </div>
 </asp:Content>

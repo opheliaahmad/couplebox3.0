@@ -65,7 +65,7 @@ namespace couplebox3._0
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                // 1. First, get the SubType from Users
+              
                 SqlCommand getSubTypeCommand = new SqlCommand("SELECT SubType FROM Users WHERE Email = @Email", connection);
                 getSubTypeCommand.Parameters.AddWithValue("@Email", Session["email"].ToString());
 

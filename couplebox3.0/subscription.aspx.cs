@@ -16,6 +16,8 @@ namespace couplebox3._0
             {
                 Response.Redirect("login.aspx");
             }
+
+            lblQuiz.Text = Session["suggest"].ToString();
         }
 
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -56,6 +58,8 @@ namespace couplebox3._0
             //set parameter for email
             RegCommand.Parameters.AddWithValue("@Email", Session["email"].ToString());
 
+            RegCommand.Parameters.AddWithValue("@Suggest", Session["suggest"].ToString());
+
             if (CheckBox1.Checked == true)
             {
                 RegCommand.Parameters.AddWithValue("@SubType", "Love Birds");
@@ -80,6 +84,17 @@ namespace couplebox3._0
             RegCon.Open();
             RegCommand.ExecuteNonQuery();
             RegCon.Close();
+
+            string updateQuery1 = @"UPDATE Subscriptions SET Suggest = @Suggest WHERE Email = @Email";
+
+            //declare a connection
+            SqlConnection RegCon1 = new SqlConnection(SqlDataSource1.ConnectionString);
+            //decalre a command
+            SqlCommand RegCommand1 = new SqlCommand(updateQuery, RegCon);
+            //set parameter for email
+            RegCommand1.Parameters.AddWithValue("@Email", Session["email"].ToString());
+
+            RegCommand1.Parameters.AddWithValue("@Suggest", Session["suggest"].ToString());
             Response.Redirect("paymentform.aspx");
         }
     }
