@@ -50,51 +50,49 @@ namespace couplebox3._0
         protected void Button1_Click(object sender, EventArgs e)
         {
             string updateQuery = @"UPDATE Users SET SubType = @SubType WHERE Email = @Email";
-
-            //declare a connection
-            SqlConnection RegCon = new SqlConnection(SqlDataSource1.ConnectionString);
-            //decalre a command
-            SqlCommand RegCommand = new SqlCommand(updateQuery, RegCon);
-            //set parameter for email
-            RegCommand.Parameters.AddWithValue("@Email", Session["email"].ToString());
-
-            RegCommand.Parameters.AddWithValue("@Suggest", Session["suggest"].ToString());
-
-            if (CheckBox1.Checked == true)
-            {
-                RegCommand.Parameters.AddWithValue("@SubType", "Love Birds");
-                
-            }
-            else if (cb2.Checked == true)
-            {
-                RegCommand.Parameters.AddWithValue("@SubType", "High Class Romance");
-               
-            }
-            else if (cb3.Checked == true)
-            {
-                RegCommand.Parameters.AddWithValue("@SubType", "King and Queen");
-             
-            }
-            else
-            {
-                lblMsg.Text = "Please select a subscription type.";
-                return;
-            }
-
-            RegCon.Open();
-            RegCommand.ExecuteNonQuery();
-            RegCon.Close();
-
             string updateQuery1 = @"UPDATE Subscriptions SET Suggest = @Suggest WHERE Email = @Email";
 
-            //declare a connection
-            SqlConnection RegCon1 = new SqlConnection(SqlDataSource1.ConnectionString);
-            //decalre a command
-            SqlCommand RegCommand1 = new SqlCommand(updateQuery, RegCon);
-            //set parameter for email
-            RegCommand1.Parameters.AddWithValue("@Email", Session["email"].ToString());
+            // First update Users table
+            using (SqlConnection RegCon = new SqlConnection(SqlDataSource1.ConnectionString))
+            {
+                SqlCommand RegCommand = new SqlCommand(updateQuery, RegCon);
+                RegCommand.Parameters.AddWithValue("@Email", Session["email"].ToString());
 
-            RegCommand1.Parameters.AddWithValue("@Suggest", Session["suggest"].ToString());
+                if (CheckBox1.Checked)
+                {
+                    RegCommand.Parameters.AddWithValue("@SubType", "Love Birds");
+                }
+                else if (cb2.Checked)
+                {
+                    RegCommand.Parameters.AddWithValue("@SubType", "High Class Romance");
+                }
+                else if (cb3.Checked)
+                {
+                    RegCommand.Parameters.AddWithValue("@SubType", "King and Queen");
+                }
+                else
+                {
+                    lblMsg.Text = "Please select a subscription type.";
+                    return;
+                }
+
+                RegCon.Open();
+                RegCommand.ExecuteNonQuery();
+                RegCon.Close();
+            }
+
+            // Now update Subscriptions table
+            using (SqlConnection RegCon1 = new SqlConnection(SqlDataSource1.ConnectionString))
+            {
+                SqlCommand RegCommand1 = new SqlCommand(updateQuery1, RegCon1);
+                RegCommand1.Parameters.AddWithValue("@Email", Session["email"].ToString());
+                RegCommand1.Parameters.AddWithValue("@Suggest", Session["suggest"].ToString()); // ✅ assign Suggest value
+
+                RegCon1.Open();
+                RegCommand1.ExecuteNonQuery();
+                RegCon1.Close();
+            }
+
             Response.Redirect("paymentform.aspx");
         }
     }
