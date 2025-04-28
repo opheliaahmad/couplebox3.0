@@ -65,6 +65,10 @@ table td, table th {
         .auto-style11 {
             color: #B51918;
         }
+        body {
+    padding-top: 8vh; /* Add 8% of screen height padding at top */
+    overflow-x: hidden; /* Prevent side scrolling if anything overflows */
+}
     </style>
 </asp:Content>
 

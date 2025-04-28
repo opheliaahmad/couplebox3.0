@@ -13,26 +13,40 @@
         .auto-style1 {
             color: #FF3399;
         }
+
+        /* NEW: fix the nav links */
+        .nav-links {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            background: lightpink;
+            padding: 8px 12px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
+
+        <!-- NEW WRAP your links inside this div -->
+        <div class="nav-links">
+            <strong>
+                <asp:HyperLink ID="hldefault0" runat="server" NavigateUrl="~/default.aspx" CssClass="auto-style1">Home</asp:HyperLink>
+            </strong><span class="auto-style1"><strong> | </strong></span><strong>
+                <asp:HyperLink ID="hlregister0" runat="server" NavigateUrl="~/registration.aspx" CssClass="auto-style1">Register</asp:HyperLink>
+            </strong><span class="auto-style1"><strong> | </strong></span><strong>
+                <asp:HyperLink ID="hllogin0" runat="server" NavigateUrl="~/login.aspx" CssClass="auto-style1">Login</asp:HyperLink>
+            </strong>
+        </div>
+
+        <!-- Page Content -->
         <div>
-            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:HyperLink ID="hldefault0" runat="server" NavigateUrl="~/default.aspx" CssClass="auto-style1">Home</asp:HyperLink>
-            </strong><span class="auto-style1"><strong>&nbsp;|
-            </strong></span><strong>
-            <asp:HyperLink ID="hlregister0" runat="server" NavigateUrl="~/registration.aspx" CssClass="auto-style1">Register</asp:HyperLink>
-            </strong><span class="auto-style1"><strong>&nbsp;|
-            </strong></span><strong>
-            <asp:HyperLink ID="hllogin0" runat="server" NavigateUrl="~/login.aspx" CssClass="auto-style1">Login</asp:HyperLink>
-            &nbsp;<br class="auto-style1" />
-            </strong>&nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
     </form>
 </body>
 </html>
