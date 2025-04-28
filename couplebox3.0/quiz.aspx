@@ -36,12 +36,13 @@ h2 {
 .quiz-table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 10px;
+    border-spacing: 5px;
+    background-color: pink;
 }
 
 .quiz-table td {
     border: 2px solid var(--romantic-red) !important;
-    background-color: lightpink;
+    background-color: pink;
     border-radius: 8px;
     padding: 8px;
     text-align: center;

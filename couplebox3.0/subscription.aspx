@@ -9,7 +9,7 @@
             transform: translate(-50%, -50%);
             border: 2px solid #cc0033; 
             padding: 20px;
-            background-color: lightpink;
+            background-color: pink;
             text-align: center;
             max-width: 1000px;
             width: 100%;
@@ -32,6 +32,7 @@
         .auto-style4 {
             text-align: justify;
             height: 22px;
+            background-color: lightpink;
         }
 
         .auto-style5 {

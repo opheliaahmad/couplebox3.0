@@ -21,31 +21,20 @@
             text-align: center;
             font-size: 18px;
             margin-bottom: 20px;
+            background-color: pink;
              
         }
 
-   .auto-style5 {
-    width: 677px;
-    border: 2px solid #cc0033;
-    padding: 12px 10px; /* Medium padding */
-    font-size: 16px; /* Medium font size */
-}
-
-.auto-style7 {
-    width: 709px;
-    text-align: justify;
-    border: 2px solid #cc0033;
-    padding: 12px 10px;
-    font-size: 16px;
-}
         .auto-style8 {
             margin-left: 0px;
-             
+             background-color: lightpink;
         }
     .auto-style9 {
         border: 2px solid #cc0033;
         padding: 12px 10px;
         font-size: 16px;
+        background-color: pink;
+   
     }
     .auto-style10 {
         width: 709px;
@@ -58,6 +47,7 @@
         width: 677px;
         border: 2px solid #cc0033;
         padding: 12px 10px;
+        
 /* Medium padding */font-size: 16px;
         text-align: left;
     }
@@ -102,11 +92,9 @@
             <td class="auto-style11"><asp:Label ID="lblSubType" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style7">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="auto-style8" OnClick="Button1_Click" />
+            <td class="auto-style9" colspan="2">
+                &nbsp;<asp:Button ID="Button1" runat="server" Text="Submit" CssClass="auto-style8" OnClick="Button1_Click" />
                 &nbsp;</td>
-            <td class="auto-style5"></td>
         </tr>
     </table>
 

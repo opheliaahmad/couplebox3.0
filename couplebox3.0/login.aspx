@@ -69,7 +69,7 @@
                 <br />
                 <asp:TextBox ID="txtPassword" runat="server" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage=" Incorrect Password!"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password Required!"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
