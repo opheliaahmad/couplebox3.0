@@ -42,30 +42,29 @@
             margin-left: 0px;
              
         }
-        .auto-style9 {
-            border: 2px solid #cc0033;
-            padding: 12px 10px;
-            font-size: 16px;
-        }
-        .auto-style10 {
-            width: 709px;
-            border: 2px solid #cc0033;
-            padding: 12px 10px;
-            font-size: 16px;
-            text-align: right;
-        }
-        .auto-style11 {
-            width: 677px;
-            border: 2px solid #cc0033;
-            padding: 12px 10px;
+    .auto-style9 {
+        border: 2px solid #cc0033;
+        padding: 12px 10px;
+        font-size: 16px;
+    }
+    .auto-style10 {
+        width: 709px;
+        border: 2px solid #cc0033;
+        padding: 12px 10px;
+        font-size: 16px;
+        text-align: right;
+    }
+    .auto-style11 {
+        width: 677px;
+        border: 2px solid #cc0033;
+        padding: 12px 10px;
 /* Medium padding */font-size: 16px;
-            text-align: left;
-        }
+        text-align: left;
+    }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <table class="auto-style3">
         <tr>
             <td class="auto-style9" colspan="2">    <p class="auto-style4">

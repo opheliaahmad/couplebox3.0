@@ -36,8 +36,9 @@
                 <asp:HyperLink ID="hldefault0" runat="server" NavigateUrl="~/default.aspx" CssClass="auto-style1">Home</asp:HyperLink>
             </strong><span class="auto-style1"><strong> | </strong></span><strong>
                 <asp:HyperLink ID="hlregister0" runat="server" NavigateUrl="~/registration.aspx" CssClass="auto-style1">Register</asp:HyperLink>
-            </strong><span class="auto-style1"><strong> | </strong></span><strong>
+            </strong><span class="auto-style1"><strong>&nbsp;| </strong></span><strong>
                 <asp:HyperLink ID="hllogin0" runat="server" NavigateUrl="~/login.aspx" CssClass="auto-style1">Login</asp:HyperLink>
+            &nbsp;<asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#FF3399" NavigateUrl="~/subscription.aspx">| Subscribe</asp:HyperLink>
             </strong>
         </div>
 

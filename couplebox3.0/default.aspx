@@ -1,20 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="couplebox3._0._default" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+        body {
+            padding-top: 8vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
         .outer-box {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 2px solid hotpink;
+            margin: 50px auto;
             padding: 20px;
             background-color: lightpink;
-            text-align: center;
-            max-width: 800px;
-            width: 90%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 2px solid hotpink;
             border-radius: 12px;
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .auto-style2 {
@@ -37,38 +39,43 @@
             margin-bottom: 20px;
         }
 
-       table {
-    width: 100%;
-    border: 2px solid #cc0033;
-    border-collapse: collapse;
-}
+        table.auto-style2 {
+            width: 100%;
+            border: 2px solid #cc0033;
+            border-collapse: collapse;
+        }
 
-table td, table th {
-    border: 1px solid #cc0033;
-    padding: 10px;
-}
+        table td, table th {
+            border: 1px solid #cc0033;
+            padding: 10px;
+            text-align: center;
+            word-break: break-word;
+        }
+
         .auto-style7 {
             text-align: center;
             height: 42px;
         }
+
         .auto-style8 {
-            margin-left: 45px;
-            margin-bottom: 0px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
         }
-        .auto-style9 {
-            width: 835px;
+
+        .auto-style9, .auto-style10 {
+            width: 100%;
         }
-        .auto-style10 {
-            text-align: center;
-            width: 835px;
-        }
+
         .auto-style11 {
             color: #B51918;
         }
-        body {
-    padding-top: 8vh; /* Add 8% of screen height padding at top */
-    overflow-x: hidden; /* Prevent side scrolling if anything overflows */
-}
+
+        @media (max-width: 600px) {
+            .auto-style6 {
+                font-size: 20px;
+            }
+        }
     </style>
 </asp:Content>
 
@@ -77,8 +84,11 @@ table td, table th {
         <h3 class="auto-style6">
             <strong>Welcome to Couple’s Box!</strong>
         </h3>
+
         <p class="auto-style5">
-            A personalized monthly experience designed to deepen your connection. Whether you’re newlyweds, long-time partners, or somewhere in between, we deliver unique moments to your doorstep so that you can bond, grow, and make lasting memories together.
+            A personalized monthly experience designed to deepen your connection. 
+            Whether you’re newlyweds, long-time partners, or somewhere in between, 
+            we deliver unique moments to your doorstep so that you can bond, grow, and make lasting memories together.
         </p>
 
         <table align="center" class="auto-style2">
@@ -91,22 +101,30 @@ table td, table th {
                 </td>
             </tr>
             <tr>
-                <td class="auto-style9">
-                    <strong>Welcome to CoupleBox </strong>— Where Every Box Begins a New Chapter in Your Love Story. At CoupleBox, we believe that romance should never feel routine. Our subscription service delivers curated, romantic mystery boxes designed exclusively for couples who crave adventure, connection, and a spark of surprise. Each month, you and your partner will receive a beautifully packaged box filled with thoughtfully selected items&nbsp; Rediscover the joy of discovery. Grow closer. Fall in love — again and again. Every box is a new journey. Where will yours take you?
-                </td>
-                <td class="auto-style5" rowspan="2">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Love Box 2.png" CssClass="auto-style8" Height="313px" Width="295px" />
+                <td colspan="2" class="auto-style9">
+                    <strong>Welcome to CoupleBox</strong> — Where Every Box Begins a New Chapter in Your Love Story. 
+                    At CoupleBox, we believe that romance should never feel routine. 
+                    Our subscription service delivers curated, romantic mystery boxes designed exclusively for couples who crave adventure, connection, and a spark of surprise. 
+                    Each month, you and your partner will receive a beautifully packaged box filled with thoughtfully selected items. 
+                    Rediscover the joy of discovery. Grow closer. Fall in love — again and again. Every box is a new journey. 
+                    Where will yours take you?
                 </td>
             </tr>
             <tr>
-                <td class="auto-style10">
-                    <asp:Button ID="btnQuiz" runat="server" OnClick="btnQuiz_Click" Text="Take the Quiz!" />
-                    <br />
-                    Click the button above to take a quick quiz to discover which one of our boxes will be the perfect fit to spice things up between you and your partner! Or click
-                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style11" NavigateUrl="~/subscription.aspx">here</asp:HyperLink>
-                    to subscribe once logged in.<br /><br />
+                <td colspan="2" class="auto-style5">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Love Box 2.png" CssClass="auto-style8" Height="281px" Width="330px" />
                 </td>
             </tr>
-            </table>
+            <tr>
+                <td colspan="2" class="auto-style10">
+                    <asp:Button ID="btnQuiz" runat="server" OnClick="btnQuiz_Click" Text="Take the Quiz!" />
+                    <br /><br />
+                    Click the button above to take a quick quiz to discover which one of our boxes will be the perfect fit to spice things up between you and your partner! 
+                    Or click
+                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style11" NavigateUrl="~/subscription.aspx">here</asp:HyperLink>
+                    to subscribe once logged in.
+                </td>
+            </tr>
+        </table>
     </div>
 </asp:Content>
