@@ -1,20 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="paymentform.aspx.cs" Inherits="couplebox3._0.paymentform" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style3 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 2px solid #cc0033;
-            padding: 20px;
-            background-color: lightpink;
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-        }
+.auto-style3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #cc0033;
+    padding: 40px 30px;
+    background-color: lightpink;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
 
         .auto-style4 {
             text-align: center;
@@ -23,20 +24,27 @@
              
         }
 
-        .auto-style5 {
-            width: 677px;
-             border: 2px solid #cc0033;
-        }
+   .auto-style5 {
+    width: 677px;
+    border: 2px solid #cc0033;
+    padding: 12px 10px; /* Medium padding */
+    font-size: 16px; /* Medium font size */
+}
 
-        .auto-style6 {
-            width: 709px;
-             border: 2px solid #cc0033;
-        }
-        .auto-style7 {
-            width: 709px;
-            text-align: justify;
-             border: 2px solid #cc0033;
-        }
+.auto-style6 {
+    width: 709px;
+    border: 2px solid #cc0033;
+    padding: 12px 10px;
+    font-size: 16px;
+}
+
+.auto-style7 {
+    width: 709px;
+    text-align: justify;
+    border: 2px solid #cc0033;
+    padding: 12px 10px;
+    font-size: 16px;
+}
         .auto-style8 {
             margin-left: 0px;
              
@@ -55,27 +63,27 @@
 
     <table class="auto-style3">
         <tr>
-            <td class="auto-style6">First Name:</td>
+            <td class="auto-style6"><strong>First Name:</strong></td>
             <td class="auto-style5"><asp:Label ID="lblFName" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6">Last Name:</td>
+            <td class="auto-style6"><strong>Last Name:</strong></td>
             <td class="auto-style5"><asp:Label ID="lblLName" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6">Shipping Address:</td>
+            <td class="auto-style6"><strong>Shipping Address:</strong></td>
             <td class="auto-style5"><asp:Label ID="lblAddress" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6">Card Number:</td>
+            <td class="auto-style6"><strong>Card Number:</strong></td>
             <td class="auto-style5"><asp:Label ID="lblCardNumber" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6">Monthly Price:</td>
+            <td class="auto-style6"><strong>Monthly Price:</strong></td>
             <td class="auto-style5"><asp:Label ID="lblPrice" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6">Subscription Type:</td>
+            <td class="auto-style6"><strong>Subscription Type:</strong></td>
             <td class="auto-style5"><asp:Label ID="lblSubType" runat="server" /></td>
         </tr>
         <tr>

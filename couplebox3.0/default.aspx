@@ -62,6 +62,9 @@ table td, table th {
             text-align: center;
             width: 835px;
         }
+        .auto-style11 {
+            color: #B51918;
+        }
     </style>
 </asp:Content>
 
@@ -93,7 +96,9 @@ table td, table th {
             </tr>
             <tr>
                 <td class="auto-style10">
-                    Click the button below to take a quick quiz to discover which one of our boxes will be the perfect fit to spice things up between you and your partner!<br /><br />
+                    Click the button below to take a quick quiz to discover which one of our boxes will be the perfect fit to spice things up between you and your partner! Or click
+                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style11" NavigateUrl="~/subscription.aspx">here</asp:HyperLink>
+                    to subscribe once logged in.<br /><br />
                     <asp:Button ID="btnQuiz" runat="server" OnClick="btnQuiz_Click" Text="Take the Quiz!" />
                 </td>
             </tr>

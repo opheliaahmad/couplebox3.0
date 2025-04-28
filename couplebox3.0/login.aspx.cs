@@ -27,6 +27,8 @@ namespace couplebox3._0
             string sPass = "";
 
 
+
+
             //declare a sqldatareader to store more query results
             SqlDataReader myReader;
 
@@ -60,20 +62,53 @@ namespace couplebox3._0
                 sPass = myReader.GetString(1);
                 sUser = myReader.GetString(2) + " " + myReader.GetString(3);
             }
-         
+
             if (txtEmail.Text == sUID && txtPassword.Text == sPass)
             {
                 //if the credentials match
-               
+
                 Session["user"] = sUser;
                 Session["email"] = sUID;
+                SqlConnection connection = new SqlConnection(SqlDataSource1.ConnectionString);
+
+
+                SqlCommand command = new SqlCommand("SELECT Suggest FROM Subscriptions WHERE Email = @Email", connection);
+                command.Parameters.AddWithValue("@Email", Session["email"].ToString());
+
+                connection.Open();
+
+                SqlDataReader myReader1 = command.ExecuteReader();
+
+
+                if (myReader1.Read())
+                {
+                    if (myReader1["Suggest"] != null)
+                    {
+                        Session["suggest"] = myReader1["Suggest"].ToString();
+                    }
+                    else
+                    {
+                        Session["suggest"] = "King and Queen";
+                    }
+                }
+                else
+                {
+                    Session["suggest"] = "King and Queen";
+                }
+                connection.Close();
                 Response.Redirect("default.aspx");
+
+
+
             }
             else
             {
                 //display an error
                 lblMsg.Text = "Invalid username or password";
             }
+            myConnection.Close();
+
+           
         }
 
         protected void txtEmail_TextChanged(object sender, EventArgs e)
@@ -90,5 +125,5 @@ namespace couplebox3._0
         {
 
         }
-    }
+    } 
 }

@@ -28,7 +28,7 @@
             </strong><span class="auto-style1"><strong>&nbsp;|
             </strong></span><strong>
             <asp:HyperLink ID="hllogin0" runat="server" NavigateUrl="~/login.aspx" CssClass="auto-style1">Login</asp:HyperLink>
-            <br class="auto-style1" />
+            &nbsp;<br class="auto-style1" />
             </strong>&nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <br />
             </asp:ContentPlaceHolder>
