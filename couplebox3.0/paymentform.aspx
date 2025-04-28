@@ -31,13 +31,6 @@
     font-size: 16px; /* Medium font size */
 }
 
-.auto-style6 {
-    width: 709px;
-    border: 2px solid #cc0033;
-    padding: 12px 10px;
-    font-size: 16px;
-}
-
 .auto-style7 {
     width: 709px;
     text-align: justify;
@@ -49,42 +42,65 @@
             margin-left: 0px;
              
         }
+        .auto-style9 {
+            border: 2px solid #cc0033;
+            padding: 12px 10px;
+            font-size: 16px;
+        }
+        .auto-style10 {
+            width: 709px;
+            border: 2px solid #cc0033;
+            padding: 12px 10px;
+            font-size: 16px;
+            text-align: right;
+        }
+        .auto-style11 {
+            width: 677px;
+            border: 2px solid #cc0033;
+            padding: 12px 10px;
+/* Medium padding */font-size: 16px;
+            text-align: left;
+        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p class="auto-style4">
+
+    <table class="auto-style3">
+        <tr>
+            <td class="auto-style9" colspan="2">    <p class="auto-style4">
         💳 Confirm your subscription details below:
     </p>
     <p class="auto-style4">
         Click
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/accountmanager.aspx">here</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/accountmanager.aspx">here</asp:HyperLink>
 &nbsp;to update your account information before submitting your order!</p>
 
-    <table class="auto-style3">
-        <tr>
-            <td class="auto-style6"><strong>First Name:</strong></td>
-            <td class="auto-style5"><asp:Label ID="lblFName" runat="server" /></td>
+            </td>
         </tr>
         <tr>
-            <td class="auto-style6"><strong>Last Name:</strong></td>
-            <td class="auto-style5"><asp:Label ID="lblLName" runat="server" /></td>
+            <td class="auto-style10"><strong>First Name:</strong></td>
+            <td class="auto-style11"><asp:Label ID="lblFName" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6"><strong>Shipping Address:</strong></td>
-            <td class="auto-style5"><asp:Label ID="lblAddress" runat="server" /></td>
+            <td class="auto-style10"><strong>Last Name:</strong></td>
+            <td class="auto-style11"><asp:Label ID="lblLName" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6"><strong>Card Number:</strong></td>
-            <td class="auto-style5"><asp:Label ID="lblCardNumber" runat="server" /></td>
+            <td class="auto-style10"><strong>Shipping Address:</strong></td>
+            <td class="auto-style11"><asp:Label ID="lblAddress" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6"><strong>Monthly Price:</strong></td>
-            <td class="auto-style5"><asp:Label ID="lblPrice" runat="server" /></td>
+            <td class="auto-style10"><strong>Card Number:</strong></td>
+            <td class="auto-style11"><asp:Label ID="lblCardNumber" runat="server" /></td>
         </tr>
         <tr>
-            <td class="auto-style6"><strong>Subscription Type:</strong></td>
-            <td class="auto-style5"><asp:Label ID="lblSubType" runat="server" /></td>
+            <td class="auto-style10"><strong>Monthly Price:</strong></td>
+            <td class="auto-style11"><asp:Label ID="lblPrice" runat="server" /></td>
+        </tr>
+        <tr>
+            <td class="auto-style10"><strong>Subscription Type:</strong></td>
+            <td class="auto-style11"><asp:Label ID="lblSubType" runat="server" /></td>
         </tr>
         <tr>
             <td class="auto-style7">
