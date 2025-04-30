@@ -40,8 +40,7 @@
             </strong><span class="auto-style1"><strong>&nbsp;| </strong></span><strong>
                 <asp:HyperLink ID="hllogin0" runat="server" NavigateUrl="~/login.aspx" CssClass="auto-style1">Login</asp:HyperLink>
             &nbsp;<asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#FF3399" NavigateUrl="~/subscription.aspx">| Subscribe</asp:HyperLink>
-            </strong>
-        </div>
+            &nbsp;</strong></div>
 
         <!-- Page Content -->
         <div>

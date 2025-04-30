@@ -62,7 +62,7 @@
     </p>
     <p class="auto-style4">
         Click
-        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/accountmanager.aspx">here</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/update.aspx">here</asp:HyperLink>
 &nbsp;to update your account information before submitting your order!</p>
 
             </td>
