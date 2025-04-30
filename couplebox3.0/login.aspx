@@ -67,7 +67,7 @@
             <td>Password:</td>
             <td class="auto-style5">
                 <br />
-                <asp:TextBox ID="txtPassword" runat="server" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" OnTextChanged="txtPassword_TextChanged" TextMode="Password"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password Required!"></asp:RequiredFieldValidator>
             </td>

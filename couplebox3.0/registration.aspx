@@ -88,14 +88,14 @@
             <tr>
                 <td class="auto-style4">Password:</td>
                 <td class="auto-style7">
-                    <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4">Confirm Password:</td>
                 <td class="auto-style7">
-                    <asp:TextBox ID="txtPasswordC" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPasswordC" runat="server" TextMode="Password"></asp:TextBox>
                     <asp:CompareValidator ID="cvPasswordC" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtPasswordC" ErrorMessage="Passwords must match"></asp:CompareValidator>
                 </td>
             </tr>
