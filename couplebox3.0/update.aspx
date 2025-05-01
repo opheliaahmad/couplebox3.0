@@ -146,7 +146,7 @@
                 <asp:TextBox ID="txtCardNumber" runat="server"></asp:TextBox>
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="rfvCardNumber" runat="server" ErrorMessage="Card number required."></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="rfvCardNumber" runat="server" ErrorMessage="Card number required." ControlToValidate="txtCardNumber"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>

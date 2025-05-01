@@ -84,12 +84,12 @@ namespace couplebox3._0
                     txtCardNumber.Visible = false;
 
                     //turn off validation controls
-                    rfvPassword.Visible = false;
+                  /*  rfvPassword.Visible = false;
                     cvPassword.Visible = false;
                     rfvFName.Visible = false;
                     rfvLName.Visible = false;
                     rfvAddress.Visible = false;
-                    rfvCardNumber.Visible = false; 
+                    rfvCardNumber.Visible = false; */
 
 
                     //hide the update labels
