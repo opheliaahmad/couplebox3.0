@@ -43,12 +43,7 @@
             </td>
             <td>&nbsp;</td>
             <td>
-<asp:RequiredFieldValidator ID="rfvPassC" runat="server" 
-    ControlToValidate="txtPassC" 
-    ErrorMessage="Please confirm your password." 
-    Enabled="false" 
-    ForeColor="Red" />
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style7">Password:</td>
